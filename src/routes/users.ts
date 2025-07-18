@@ -1,28 +1,36 @@
 import { FastifyInstance } from 'fastify'
 import bcrypt from 'bcrypt'
 import repl from 'repl'
-import { Prisma } from '@prisma/client'
+import { Prisma, PrismaClient, Role } from '@prisma/client'
 
 interface CreateUserRequest {
   username: string
   password: string
 }
 
+const SPECIAL_ROLES: Record<string, Role> = {
+  admin: 'ADMIN',
+  nikita: 'NIKITA',
+}
+
 export default function userRoutes(server: FastifyInstance) {
-  server.get('/', (request, reply) => {
-    return { user: 42 }
+  server.get('/', async (request, reply) => {
+    return await server.prisma.user.findMany()
   })
 
   server.post<{ Body: CreateUserRequest }>('/', async (request, reply) => {
-    console.log(request.body, request.body.username)
     const { prisma } = server
     const { username, password } = request.body
 
-    const passwordHash = await bcrypt.hash(request.body.password, 10)
+    const passwordHash = await bcrypt.hash(password, 5)
 
     try {
       return await prisma.user.create({
-        data: { username, passwordHash },
+        data: {
+          username: username.trim().toLowerCase(),
+          passwordHash,
+          role: SPECIAL_ROLES[username],
+        },
       })
     } catch (err) {
       if (err instanceof Prisma.PrismaClientKnownRequestError) {
