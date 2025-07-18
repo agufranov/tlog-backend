@@ -20,9 +20,36 @@ enum Role {
 }
 
 model User {
-  id           Int         @id @default(autoincrement())
-  username     String      @unique
+  id           Int           @id @default(autoincrement())
+  username     String        @unique
   passwordHash String
-  role         Role        @default(SURVIVOR)
+  role         Role          @default(SURVIVOR)
+  players      RoundPlayer[]
+  roundsWon    Round[]
+
   @@map("users")
+}
+
+model Round {
+  id       String        @id @default(uuid())
+  startAt  DateTime
+  endAt    DateTime
+  players  RoundPlayer[]
+  winnerId Int?
+  winner   User?         @relation(fields: [winnerId], references: [id])
+
+  @@map("rounds")
+}
+
+model RoundPlayer {
+  id      String @unique @default(uuid())
+  roundId String
+  round   Round  @relation(fields: [roundId], references: [id])
+  userId  Int
+  user    User   @relation(fields: [userId], references: [id])
+  taps    Int    @default(0)
+  score   Int    @default(0)
+
+  @@id([roundId, userId])
+  @@map("round_players")
 }
