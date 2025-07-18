@@ -23,6 +23,7 @@ model User {
   id           Int           @id @default(autoincrement())
   username     String        @unique
   passwordHash String
+  authSessions AuthSession[]
   role         Role          @default(SURVIVOR)
   players      RoundPlayer[]
   roundsWon    Round[]
@@ -52,4 +53,13 @@ model RoundPlayer {
 
   @@id([roundId, userId])
   @@map("round_players")
+}
+
+model AuthSession {
+  id     Int    @id @default(autoincrement())
+  data   String @unique @default(uuid())
+  userId Int
+  user   User   @relation(fields: [userId], references: [id])
+
+  @@map("auth_sessions")
 }
