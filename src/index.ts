@@ -1,11 +1,19 @@
 import Fastify from 'fastify'
-import { roundRoutes } from '@/routes/rounds'
+import { roundRoutes } from './routes/rounds'
+import userRoutes from './routes/users'
+import cors from '@fastify/cors'
+import prismaPlugin from '@/plugins/prisma'
+import sensiblePlugin from '@/plugins/sensible'
 
 const server = Fastify({
   logger: true,
 })
 
 async function main() {
+  server.register(sensiblePlugin)
+  server.register(cors)
+  server.register(prismaPlugin)
+
   server.register(roundRoutes)
 
   server.listen({ port: 3000 }, (err, address) => {

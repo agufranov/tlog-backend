@@ -18,6 +18,14 @@
     ajv-formats "^3.0.1"
     fast-uri "^3.0.0"
 
+"@fastify/cors@^11.0.1":
+  version "11.0.1"
+  resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/@fastify/cors/-/cors-11.0.1.tgz#5f35396f12231f093b3d05f26fa5d43cab6a7d86"
+  integrity sha512-dmZaE7M1f4SM8ZZuk5RhSsDJ+ezTgI7v3HHRj8Ow9CneczsPLZV6+2j2uwdaSLn8zhTv6QV0F4ZRcqdalGx1pQ==
+  dependencies:
+    fastify-plugin "^5.0.0"
+    toad-cache "^3.7.0"
+
 "@fastify/error@^4.0.0":
   version "4.2.0"
   resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/@fastify/error/-/error-4.2.0.tgz#d40f46ba75f541fdcc4dc276b7308bbc8e8e6d7a"
@@ -50,6 +58,19 @@
     "@fastify/forwarded" "^3.0.0"
     ipaddr.js "^2.1.0"
 
+"@fastify/sensible@^6.0.3":
+  version "6.0.3"
+  resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/@fastify/sensible/-/sensible-6.0.3.tgz#8a40cb5cd4deb537bb18bea9dc4a9d594bf24ae7"
+  integrity sha512-Iyn8698hp/e5+v8SNBBruTa7UfrMEP52R16dc9jMpqSyEcPsvWFQo+R6WwHCUnJiLIsuci2ZoEZ7ilrSSCPIVg==
+  dependencies:
+    "@lukeed/ms" "^2.0.2"
+    dequal "^2.0.3"
+    fastify-plugin "^5.0.0"
+    forwarded "^0.2.0"
+    http-errors "^2.0.0"
+    type-is "^1.6.18"
+    vary "^1.1.2"
+
 "@jridgewell/resolve-uri@^3.0.3":
   version "3.1.2"
   resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/@jridgewell/resolve-uri/-/resolve-uri-3.1.2.tgz#7a0ee601f60f99a20c7c7c5ff0c80388c1189bd6"
@@ -67,6 +88,11 @@
   dependencies:
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
+
+"@lukeed/ms@^2.0.2":
+  version "2.0.2"
+  resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/@lukeed/ms/-/ms-2.0.2.tgz#07f09e59a74c52f4d88c6db5c1054e819538e2a8"
+  integrity sha512-9I2Zn6+NJLfaGoz9jN3lpwDgAYvfGeNYdbAIjJOqzs4Tpc+VU3Jqq4IofSUBKajiDS8k9fZIg18/z13mpk1bsA==
 
 "@prisma/client@^5.12.0":
   version "5.22.0"
@@ -129,7 +155,14 @@
   resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/@tsconfig/node16/-/node16-1.0.4.tgz#0b92dcc0cc1c81f6f306a381f28e31b1a56536e9"
   integrity sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==
 
-"@types/node@^24.0.14":
+"@types/bcrypt@^5.0.2":
+  version "5.0.2"
+  resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/@types/bcrypt/-/bcrypt-5.0.2.tgz#22fddc11945ea4fbc3655b3e8b8847cc9f811477"
+  integrity sha512-6atioO8Y75fNcbmj0G7UjI9lXN2pQ/IGJ2FWT4a/btd0Lk9lQalHLKhkgKVZ3r+spnmWUKfbMi1GEe9wyHQfNQ==
+  dependencies:
+    "@types/node" "*"
+
+"@types/node@*", "@types/node@^24.0.14":
   version "24.0.14"
   resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/@types/node/-/node-24.0.14.tgz#6e3d4fb6d858c48c69707394e1a0e08ce1ecc1bc"
   integrity sha512-4zXMWD91vBLGRtHK3YbIoFMia+1nqEz72coM42C5ETjnNCa/heoj7NT1G67iAfOqMmcfhuCZ4uNpyz8EjlAejw==
@@ -201,6 +234,14 @@ balanced-match@^1.0.0:
   resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/balanced-match/-/balanced-match-1.0.2.tgz#e83e3a7e3f300b34cb9d87f615fa0cbf357690ee"
   integrity sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==
 
+bcrypt@^6.0.0:
+  version "6.0.0"
+  resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/bcrypt/-/bcrypt-6.0.0.tgz#86643fddde9bcd0ad91400b063003fa4b0312835"
+  integrity sha512-cU8v/EGSrnH+HnxV2z0J7/blxH8gq7Xh2JFT6Aroax7UohdmiJJlxApMxtKfuI7z68NvvVcmR78k2LbT6efhRg==
+  dependencies:
+    node-addon-api "^8.3.0"
+    node-gyp-build "^4.8.4"
+
 binary-extensions@^2.0.0:
   version "2.3.0"
   resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/binary-extensions/-/binary-extensions-2.3.0.tgz#f6e14a97858d327252200242d4ccfe522c445522"
@@ -263,6 +304,11 @@ debug@^4:
   dependencies:
     ms "^2.1.3"
 
+depd@2.0.0:
+  version "2.0.0"
+  resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/depd/-/depd-2.0.0.tgz#b696163cc757560d09cf22cc8fad1571b79e76df"
+  integrity sha512-g7nH6P6dyDioJogAAGprGpCtVImJhpPk/roCzdb3fIh61/s/nPsfR6onyMwkCAR/OlC3yBC0lESvUoQEAssIrw==
+
 dequal@^2.0.3:
   version "2.0.3"
   resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/dequal/-/dequal-2.0.3.tgz#2644214f1997d39ed0ee0ece72335490a7ac67be"
@@ -312,6 +358,11 @@ fast-uri@^3.0.0, fast-uri@^3.0.1:
   resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/fast-uri/-/fast-uri-3.0.6.tgz#88f130b77cfaea2378d56bf970dea21257a68748"
   integrity sha512-Atfo14OibSv5wAp4VWNsFYE1AchQRTv9cBGWET4pZWHzYshFSS9NQI6I57rdKn9croWVMbYFbLhJ+yJvmZIIHw==
 
+fastify-plugin@^5.0.0, fastify-plugin@^5.0.1:
+  version "5.0.1"
+  resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/fastify-plugin/-/fastify-plugin-5.0.1.tgz#82d44e6fe34d1420bb5a4f7bee434d501e41939f"
+  integrity sha512-HCxs+YnRaWzCl+cWRYFnHmeRFyR5GVnJTAaCJQiYzQSDwK9MgJdyAsuL3nh0EWRCYMgQ5MeziymvmAhUHYHDUQ==
+
 fastify@^5.4.0:
   version "5.4.0"
   resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/fastify/-/fastify-5.4.0.tgz#82bf56e0bc36ba8dfb0bd372a0de8b62ccf3287c"
@@ -356,6 +407,11 @@ find-my-way@^9.0.0:
     fast-querystring "^1.0.0"
     safe-regex2 "^5.0.0"
 
+forwarded@^0.2.0:
+  version "0.2.0"
+  resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/forwarded/-/forwarded-0.2.0.tgz#2269936428aad4c15c7ebe9779a84bf0b2a81811"
+  integrity sha512-buRG0fpBtRHSTCOASe6hD258tEubFoRLb4ZNA6NxMVHNw2gOcwHo9wyablzMzOA5z9xA9L1KNjk/Nt6MT9aYow==
+
 fsevents@2.3.3, fsevents@~2.3.2:
   version "2.3.3"
   resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/fsevents/-/fsevents-2.3.3.tgz#cac6407785d03675a2a5e1a5305c697b347d90d6"
@@ -373,10 +429,26 @@ has-flag@^3.0.0:
   resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/has-flag/-/has-flag-3.0.0.tgz#b5d454dc2199ae225699f3467e5a07f3b955bafd"
   integrity sha512-sKJf1+ceQBr4SMkvQnBDNDtf4TXpVhVGateu0t918bl30FnbE2m4vNLX+VWe/dpjlb+HugGYzW7uQXH98HPEYw==
 
+http-errors@^2.0.0:
+  version "2.0.0"
+  resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/http-errors/-/http-errors-2.0.0.tgz#b7774a1486ef73cf7667ac9ae0858c012c57b9d3"
+  integrity sha512-FtwrG/euBzaEjYeRqOgly7G0qviiXoJWnvEH2Z1plBdXgbyjv34pHTSb9zoeHMyDy33+DWy5Wt9Wo+TURtOYSQ==
+  dependencies:
+    depd "2.0.0"
+    inherits "2.0.4"
+    setprototypeof "1.2.0"
+    statuses "2.0.1"
+    toidentifier "1.0.1"
+
 ignore-by-default@^1.0.1:
   version "1.0.1"
   resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/ignore-by-default/-/ignore-by-default-1.0.1.tgz#48ca6d72f6c6a3af00a9ad4ae6876be3889e2b09"
   integrity sha512-Ius2VYcGNk7T90CppJqcIkS5ooHUZyIQK+ClZfMfMNFEF9VSE73Fq+906u/CWu92x4gzZMWOwfFYckPObzdEbA==
+
+inherits@2.0.4:
+  version "2.0.4"
+  resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/inherits/-/inherits-2.0.4.tgz#0fa2c64f932917c3433a0ded55363aae37416b7c"
+  integrity sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
 
 ipaddr.js@^2.1.0:
   version "2.2.0"
@@ -419,6 +491,11 @@ json-schema-traverse@^1.0.0:
   resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/json-schema-traverse/-/json-schema-traverse-1.0.0.tgz#ae7bcb3656ab77a73ba5c49bf654f38e6b6860e2"
   integrity sha512-NM8/P9n3XjXhIZn1lLhkFaACTOURQXjWhV4BA/RnOv8xvgqtqpAX9IO4mRQxSx1Rlo4tqzeqb0sOlruaOy3dug==
 
+json5@^2.2.2:
+  version "2.2.3"
+  resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/json5/-/json5-2.2.3.tgz#78cd6f1a19bdc12b73db5ad0c61efd66c1e29283"
+  integrity sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==
+
 light-my-request@^6.0.0:
   version "6.6.0"
   resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/light-my-request/-/light-my-request-6.6.0.tgz#c9448772323f65f33720fb5979c7841f14060add"
@@ -433,6 +510,23 @@ make-error@^1.1.1:
   resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/make-error/-/make-error-1.3.6.tgz#2eb2e37ea9b67c4891f684a1394799af484cf7a2"
   integrity sha512-s8UhlNe7vPKomQhC1qFelMokr/Sc3AgNbso3n74mVPA5LTZwkB9NlXf4XPamLxJE8h0gh73rM94xvwRT2CVInw==
 
+media-typer@0.3.0:
+  version "0.3.0"
+  resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/media-typer/-/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
+  integrity sha512-dq+qelQ9akHpcOl/gUVRTxVIOkAJ1wR3QAvb4RsVjS8oVoFjDGTc679wJYmUmknUF5HwMLOgb5O+a3KxfWapPQ==
+
+mime-db@1.52.0:
+  version "1.52.0"
+  resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/mime-db/-/mime-db-1.52.0.tgz#bbabcdc02859f4987301c856e3387ce5ec43bf70"
+  integrity sha512-sPU4uV7dYlvtWJxwwxHD0PuihVNiE7TyAbQ5SWxDCB9mUYvOgroQOwYQQOKPJ8CIbE+1ETVlOoK1UC2nU3gYvg==
+
+mime-types@~2.1.24:
+  version "2.1.35"
+  resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/mime-types/-/mime-types-2.1.35.tgz#381a871b62a734450660ae3deee44813f70d959a"
+  integrity sha512-ZDY+bPm5zTTF+YpCrAU9nK0UgICYPT0QtT1NZWFv4s++TNkcgVaT0g6+4R2uI4MjQjzysHB1zxuWL50hzaeXiw==
+  dependencies:
+    mime-db "1.52.0"
+
 minimatch@^3.1.2:
   version "3.1.2"
   resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/minimatch/-/minimatch-3.1.2.tgz#19cd194bfd3e428f049a70817c038d89ab4be35b"
@@ -440,10 +534,25 @@ minimatch@^3.1.2:
   dependencies:
     brace-expansion "^1.1.7"
 
+minimist@^1.2.6:
+  version "1.2.8"
+  resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/minimist/-/minimist-1.2.8.tgz#c1a464e7693302e082a075cee0c057741ac4772c"
+  integrity sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==
+
 ms@^2.1.3:
   version "2.1.3"
   resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/ms/-/ms-2.1.3.tgz#574c8138ce1d2b5861f0b44579dbadd60c6615b2"
   integrity sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
+
+node-addon-api@^8.3.0:
+  version "8.5.0"
+  resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/node-addon-api/-/node-addon-api-8.5.0.tgz#c91b2d7682fa457d2e1c388150f0dff9aafb8f3f"
+  integrity sha512-/bRZty2mXUIFY/xU5HLvveNHlswNJej+RnxBjOMkidWfwZzgTbPG1E3K5TOxRLOR+5hX7bSofy8yf1hZevMS8A==
+
+node-gyp-build@^4.8.4:
+  version "4.8.4"
+  resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/node-gyp-build/-/node-gyp-build-4.8.4.tgz#8a70ee85464ae52327772a90d66c6077a900cfc8"
+  integrity sha512-LA4ZjwlnUblHVgq0oBF3Jl/6h/Nvs5fzBLwdEF4nuxnFdsfajde4WfxtJr3CaiH+F6ewcIB/q4jQ4UzPyid+CQ==
 
 nodemon@^3.1.10:
   version "3.1.10"
@@ -677,6 +786,11 @@ set-cookie-parser@^2.6.0:
   resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/set-cookie-parser/-/set-cookie-parser-2.7.1.tgz#3016f150072202dfbe90fadee053573cc89d2943"
   integrity sha512-IOc8uWeOZgnb3ptbCURJWNjWUPcO3ZnTTdzsurqERrP6nPyv+paC55vJM0LpOlT2ne+Ix+9+CRG1MNLlyZ4GjQ==
 
+setprototypeof@1.2.0:
+  version "1.2.0"
+  resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/setprototypeof/-/setprototypeof-1.2.0.tgz#66c9a24a73f9fc28cbe66b09fed3d33dcaf1b424"
+  integrity sha512-E5LDX7Wrp85Kil5bhZv46j8jOeboKq5JMmYM3gVGdGH8xFpPWXUMsNrlODCrkoxMEeNi/XZIwuRvY4XNwYMJpw==
+
 simple-update-notifier@^2.0.0:
   version "2.0.0"
   resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/simple-update-notifier/-/simple-update-notifier-2.0.0.tgz#d70b92bdab7d6d90dfd73931195a30b6e3d7cebb"
@@ -695,6 +809,16 @@ split2@^4.0.0, split2@^4.1.0:
   version "4.2.0"
   resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/split2/-/split2-4.2.0.tgz#c9c5920904d148bab0b9f67145f245a86aadbfa4"
   integrity sha512-UcjcJOWknrNkF6PLX83qcHM6KHgVKNkV62Y8a5uYDVv9ydGQVwAHMKqHdJje1VTWpljG0WYpCDhrCdAOYH4TWg==
+
+statuses@2.0.1:
+  version "2.0.1"
+  resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/statuses/-/statuses-2.0.1.tgz#55cb000ccf1d48728bd23c685a063998cf1a1b63"
+  integrity sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ==
+
+strip-bom@^3.0.0:
+  version "3.0.0"
+  resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/strip-bom/-/strip-bom-3.0.0.tgz#2334c18e9c759f7bdd56fdef7e9ae3d588e68ed3"
+  integrity sha512-vavAMRXOgBVNF6nyEEmL3DBK19iRpDcoIwW+swQ+CbGiu7lju6t+JklA1MHweoWtadgt4ISVUsXLyDq34ddcwA==
 
 supports-color@^5.5.0:
   version "5.5.0"
@@ -722,6 +846,11 @@ toad-cache@^3.7.0:
   resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/toad-cache/-/toad-cache-3.7.0.tgz#b9b63304ea7c45ec34d91f1d2fa513517025c441"
   integrity sha512-/m8M+2BJUpoJdgAHoG+baCwBT+tf2VraSfkBgl0Y00qIWt41DJ8R5B8nsEw0I58YwF5IZH6z24/2TobDKnqSWw==
 
+toidentifier@1.0.1:
+  version "1.0.1"
+  resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/toidentifier/-/toidentifier-1.0.1.tgz#3be34321a88a820ed1bd80dfaa33e479fbb8dd35"
+  integrity sha512-o5sSPKEkg/DIQNmH43V0/uerLrpzVedkUh8tGNvaeXpfpuwjKenlSox/2O/BTlZUtEe+JG7s5YhEz608PlAHRA==
+
 touch@^3.1.0:
   version "3.1.1"
   resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/touch/-/touch-3.1.1.tgz#097a23d7b161476435e5c1344a95c0f75b4a5694"
@@ -746,6 +875,23 @@ ts-node@^10.9.2:
     v8-compile-cache-lib "^3.0.1"
     yn "3.1.1"
 
+tsconfig-paths@^4.2.0:
+  version "4.2.0"
+  resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/tsconfig-paths/-/tsconfig-paths-4.2.0.tgz#ef78e19039133446d244beac0fd6a1632e2d107c"
+  integrity sha512-NoZ4roiN7LnbKn9QqE1amc9DJfzvZXxF4xDavcOWt1BPkdx+m+0gJuPM+S0vCe7zTJMYUP0R8pO2XMr+Y8oLIg==
+  dependencies:
+    json5 "^2.2.2"
+    minimist "^1.2.6"
+    strip-bom "^3.0.0"
+
+type-is@^1.6.18:
+  version "1.6.18"
+  resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/type-is/-/type-is-1.6.18.tgz#4e552cd05df09467dcbc4ef739de89f2cf37c131"
+  integrity sha512-TkRKr9sUTxEH8MdfuCSP7VizJyzRNMjj2J2do2Jr3Kym598JVdEksuzPQCnlFPW4ky9Q+iA+ma9BGm06XQBy8g==
+  dependencies:
+    media-typer "0.3.0"
+    mime-types "~2.1.24"
+
 typescript@^5.8.3:
   version "5.8.3"
   resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/typescript/-/typescript-5.8.3.tgz#92f8a3e5e3cf497356f4178c34cd65a7f5e8440e"
@@ -765,6 +911,11 @@ v8-compile-cache-lib@^3.0.1:
   version "3.0.1"
   resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/v8-compile-cache-lib/-/v8-compile-cache-lib-3.0.1.tgz#6336e8d71965cb3d35a1bbb7868445a7c05264bf"
   integrity sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==
+
+vary@^1.1.2:
+  version "1.1.2"
+  resolved "https://npm-mirror.gitverse.ru/nexus/repository/registry_npmjs_org/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
+  integrity sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==
 
 xtend@^4.0.0:
   version "4.0.2"
