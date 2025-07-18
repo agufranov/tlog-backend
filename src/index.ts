@@ -6,7 +6,7 @@ import prismaPlugin from '@/plugins/prisma'
 import sensiblePlugin from '@/plugins/sensible'
 
 const server = Fastify({
-  logger: true,
+  //   logger: true,
 })
 
 async function main() {
@@ -14,6 +14,7 @@ async function main() {
   server.register(cors)
   server.register(prismaPlugin)
 
+  server.register(userRoutes, { prefix: '/users' })
   server.register(roundRoutes)
 
   server.listen({ port: 3000 }, (err, address) => {
