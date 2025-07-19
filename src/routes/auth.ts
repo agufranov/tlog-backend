@@ -14,7 +14,7 @@ const SPECIAL_ROLES: Record<string, Role> = {
 export default function authRoutes(server: FastifyInstance) {
   server.post<{ Body: UserCredentialsRequest; Reply: AuthLoginResponse }>(
     '/signIn',
-    { preValidation: formatUsername },
+    { preValidation: formatUsername, preParsing: [] }, // TODO get done with hooks
     async (request, reply) => {
       const { prisma } = server
       const { username, password } = request.body
@@ -60,7 +60,7 @@ export default function authRoutes(server: FastifyInstance) {
 
   server.post<{ Body: UserCredentialsRequest }>(
     '/signUp',
-    { preValidation: formatUsername },
+    { preValidation: formatUsername, preParsing: [] }, // TODO get done with hooks
     async (request, reply) => {
       const { prisma } = server
       const { username, password } = request.body
@@ -88,7 +88,6 @@ export default function authRoutes(server: FastifyInstance) {
   )
 
   server.get('/cookie', async (request, reply) => {
-    // @ts-ignore
-    return { cookie: request.cookies }
+    return { user: request.user }
   })
 }

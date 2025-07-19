@@ -1,21 +1,21 @@
 import Fastify from 'fastify'
-import { roundRoutes } from './routes/rounds'
-import userRoutes from './routes/users'
 import sensiblePlugin from '@/plugins/sensible'
 import prismaPlugin from '@/plugins/prisma'
 import corsPlugin from '@/plugins/cors'
 import cookiePlugin from '@/plugins/cookie'
-import authRoutes from './routes/auth'
+import authPlugin from '@/plugins/auth'
+import authRoutes from '@/routes/auth'
+import userRoutes from '@/routes/users'
+import roundRoutes from '@/routes/rounds'
 
-const server = Fastify({
-  //   logger: true,
-})
+const server = Fastify({})
 
 async function main() {
   server.register(sensiblePlugin)
   server.register(prismaPlugin)
   server.register(corsPlugin)
   server.register(cookiePlugin)
+  server.register(authPlugin)
 
   server.register(userRoutes, { prefix: '/users' })
   server.register(authRoutes, { prefix: '/auth' })
